@@ -9,9 +9,12 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         br.close();
 
-        while( n > 0 ) {
-            System.out.println(n);
+        StringBuilder sb = new StringBuilder();
+
+        while(n > 0) {
+            sb.append(n+"\n");
             n--;
         }
+        System.out.println(sb);
     }
 }
