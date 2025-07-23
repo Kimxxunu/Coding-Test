@@ -6,14 +6,14 @@ class Solution {
         int size = nums.length/2;
         System.out.println(size);
         
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashSet<Integer> hs = new HashSet<>();
         
+        // 중복값 제외
         for(int num : nums) {
-            if(map.get(num)!=null) continue;
-            map.put(num,1);
+            hs.add(num);
         }
         
-        if(map.size()< size) answer = map.size();
+        if(hs.size()< size) answer = hs.size();
         else answer = size;
         
         return answer;
